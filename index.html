@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editor de Imagem</title>
+  <link rel="stylesheet" href="b.css" />
+</head>
+<body>
+
+  <!-- Barra de ferramentas superior -->
+  <div class="toolbar">
+    <button id="add-text-btn" disabled>Adicionar Texto</button>
+    <button id="group-btn" disabled>Agrupar</button>
+    <button id="ungroup-btn" disabled>Desagrupar</button>
+    <button id="export-btn">Exportar</button>
+  </div>
+
+  <!-- Área principal com barra lateral e editor -->
+  <div class="container">
+    <!-- Barra lateral com imagens -->
+    <div class="sidebar">
+      <h2>Imagens</h2>
+      <div class="image-list">
+        <button onclick="loadImage('3.png')"><img src="img/3.png" alt="Imagem 1" height="100px"/></button>
+        <button onclick="loadImage('4.png')"><img src="img/4.png" alt="Imagem 2" height="100px"/></button>
+        <button onclick="loadImage('5.png')"><img src="img/5.png" alt="Imagem 3" height="100px"/></button>
+        <button onclick="loadImage('6.png')"><img src="img/6.png" alt="Imagem 4" height="100px"/></button>
+        <button onclick="loadImage('7.png')"><img src="img/7.png" alt="Imagem 5" height="100px"/></button>
+        <button onclick="loadImage('8.png')"><img src="img/8.png" alt="Imagem 6" height="100px"/></button>
+      </div>
+    </div>
+
+    <!-- Área de edição -->
+    <div class="editor-container">
+      <div class="editor" id="editor">
+        <!-- Elementos dinâmicos aparecerão aqui -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de adicionar texto -->
+  <div id="text-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Adicionar Texto</h3>
+      <textarea id="text-input" placeholder="Digite seu texto aqui..."></textarea>
+      <button id="add-text-to-image">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
