@@ -1,314 +1,134 @@
-/* ==========================
-   Estilo Global
-   ========================== */
-   * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
     margin: 0;
-    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: rgb(128, 128, 241);
+    color: #ffdab9;
     display: flex;
-    flex-direction: column;
-    background-color: #f0f2f5;
-    overflow: hidden;
-    height: 100vh;
-  }
-  
-  /* ==========================
-     Barra de Ferramentas
-     ========================== */
-  .toolbar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #1e1e1e;
-    padding: 10px 20px;
-    color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-  }
-  
-  .toolbar button {
-    background-color: #3a3a3a;
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .toolbar button:hover {
-    background-color: #505050;
-  }
-  
-  .toolbar button:disabled {
-    background-color: #555;
-    cursor: not-allowed;
-  }
-  
-  /* ==========================
-     Layout Principal
-     ========================== */
-  .container {
-    display: flex;
-    flex-grow: 1;
-    height: 100%;
-  }
-  
-  /* ==========================
-     Barra Lateral
-     ========================== */
-  .sidebar {
-    width: 220px;
-    background-color: #2e2e2e;
-    color: white;
-    padding: 20px 10px;
-    overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .sidebar h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #ddd;
-  }
-  
-  .image-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .image-list button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .image-list button:hover {
-    transform: scale(1.05);
-  }
-  
-  .image-list img {
-    border-radius: 6px;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* ==========================
-     Área de Edição
-     ========================== */
-  .editor-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 10px;
-    overflow: auto;
-  }
-  
-  .editor {
-    position: relative;
-    flex-grow: 1;
-    border: 2px dashed #bbb;
-    background-color: #fafafa;
-    border-radius: 6px;
-    overflow: visible;
-  }
-  
-  /* ==========================
-     Contêiner de Elementos
-     ========================== */
-  .image-container,
-  .text-overlay {
-    position: absolute;
-    transform-origin: center center;
-    border: 2px dashed transparent;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .image-container.selected,
-  .text-overlay.selected {
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  }
-  
-  .image-preview {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    cursor: move;
-  }
-  
-  /* ==========================
-     Texto Overlay (Post-it)
-     ========================== */
-  .text-overlay {
-    background-color: rgba(255, 255, 0, 0.3);
-    padding: 4px;
-    resize: both;
-    overflow: auto;
-  }
-  
-  .text-overlay textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: transparent;
-    resize: none;
-    outline: none;
-    font-size: 16px;
-    font-family: inherit;
-  }
-  
-  /* ==========================
-     Controles (Resize, Rotação, Exclusão)
-     ========================== */
-  .handle,
-  .rotation-control,
-  .delete-button {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-  
-  .handle {
-    background-color: #007bff;
-    cursor: pointer;
-  }
-  
-  .handle.top-left {
-    top: -7px;
-    left: -7px;
-    cursor: nwse-resize;
-  }
-  
-  .handle.top-right {
-    top: -7px;
-    right: -7px;
-    cursor: nesw-resize;
-  }
-  
-  .handle.bottom-left {
-    bottom: -7px;
-    left: -7px;
-    cursor: nesw-resize;
-  }
-  
-  .handle.bottom-right {
-    bottom: -7px;
-    right: -7px;
-    cursor: nwse-resize;
-  }
-  
-  .rotation-control {
-    background-color: #ff9800;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    top: -20px;
-    right: 40px;
-    cursor: grab;
-  }
-  
-  .rotation-control::before {
-    content: '↻';
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo{
+  height: 250px;
+  width: 250px;
+  background-color: rgb(0, 0, 225);
+  border-radius: 50%;
+  align-items: center;
+  margin-left: 19%;
+}
+
+img{
+  margin-left: 6%;
+  margin-top: -10%;
+}
+
+.signin {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #ffdab9;
+    background: rgba(2, 2, 137, 0.5);
+    box-shadow: 0 0 20px rgba(2, 13, 46, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.signin h2 {
+    margin-top: 0;
+    color: #ffdab9;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffdab9;
+    padding-bottom: 10px;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ffdab9;
+    background-color: transparent;
+    color: #ffdab9;
+    font-size: 16px;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.inputBox input:focus {
+    border-bottom-color: #fff;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffdab9;
+    font-size: 16px;
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label {
+    transform: translateY(-20px);
     font-size: 12px;
     color: #fff;
-  }
-  
-  .delete-button {
-    top: -20px;
-    right: -20px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.links a {
+    color: #ffdab9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+.inputBox input[type="submit"] {
+    background-color: #ffdab9;
+    color: #000;
     border: none;
-    cursor: pointer;
-  }
-  
-  /* ==========================
-     Modal de Texto
-     ========================== */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    background-color: white;
-    width: 90%;
-    max-width: 500px;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    animation: fadeIn 0.3s;
-    position: relative;
-  }
-  
-  .modal-content textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .modal-content button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  /* ==========================
-     Animações e Responsivo
-     ========================== */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 160px;
-      padding: 10px;
-    }
-  
-    .toolbar {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .toolbar button {
-      flex: 1 1 auto;
-      min-width: 100px;
-      margin-bottom: 8px;
-    }
-  
-    .modal-content {
-      width: 95%;
-    }
-  }
-  
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Source Code Pro', monospace;
+    width: 100%;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: #00aaff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(65, 105, 225, 0.7);
+}
+
+.login_form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 225, 0.8);
+}
