@@ -27,14 +27,8 @@ function criarConta(){
         }
         else{
             //Conferindo se é um de nós ou não
-            if (e == "luanaherthal@gmail.com" or
-                e == "Lucas" or
-                e =="viniciusganda2@gmail.com" or
-                e == "" or
-                e == "kunz.luizf@gmail.com" or
-                e =="alanalisbinski9@gmail.com" or
-                e == "rv.falcade@gmail.com" or
-                e == "ed22072008@gmail.com"){
+            if (e in("luanaherthal@gmail.com", "Lucas", "viniciusganda2@gmail.com", "", "kunz.luizf@gmail.com", "alanalisbinski9@gmail.com", "rv.falcade@gmail.com", "ed22072008@gmail.com"))
+                {
                 adimin = true;
                 }
             else{
@@ -42,7 +36,7 @@ function criarConta(){
             }
 
             //Cadastrando
-            pessoa.push()
+            pessoa.push(new Cadastro(name, e, password, adimin));
             
         }
     }
