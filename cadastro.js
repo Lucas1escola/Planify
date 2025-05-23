@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const newPassword = newPasswordInput.value.trim();
         const confirmPassword = confirmPasswordInput.value.trim();
 
-        // Validação básica dos campos
         if (newUsername === '' || newPassword === '' || confirmPassword === '') {
             errorMessage.textContent = 'Por favor, preencha todos os campos.';
             return;
