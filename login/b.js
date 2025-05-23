@@ -16,7 +16,7 @@ pessoas = [];
 function criarConta(){
     //Recebendo os elementos a partir dos inputs do Html
     name = document.getElementById(nome);
-    e = document.getElementById(email);
+    e = document.getElementById(email).lower();
     password = document.getElementById(senha);
 
     //Verificando se o cadastro já existe
@@ -43,6 +43,6 @@ function criarConta(){
 }
 
 //Login no site
-function login(email, senha){
+function login(){
 
 }
