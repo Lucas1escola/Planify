@@ -27,7 +27,7 @@ function criarConta(){
         }
         else{
             //Conferindo se é um de nós ou não
-            if (e in("luanaherthal@gmail.com", "Lucas", "viniciusganda2@gmail.com", "", "kunz.luizf@gmail.com", "alanalisbinski9@gmail.com", "rv.falcade@gmail.com", "ed22072008@gmail.com"))
+            if (e in("luanaherthal@gmail.com", "lucas.andrioli.santo@gmail.com", "viniciusganda2@gmail.com", "a.g.tomelin@gmail.com", "kunz.luizf@gmail.com", "alanalisbinski9@gmail.com", "rv.falcade@gmail.com", "ed22072008@gmail.com"))
                 {
                 adimin = true;
                 }
