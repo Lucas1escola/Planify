@@ -7,11 +7,38 @@
     <link href="b.css" rel="stylesheet">
 </head>
 <body>
+    <div class="login-container">
+             <div class="logo-container">
     <section>
         <div class="signin">
             <div class="logo">
                 <img src="img/logo.png" alt="logo" width="250px" height="250px">
             </div>
+        <h1 class="login-title">Cadastre-se</h1>
+
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="newUsername">Usuário ou Email</label>
+                <input type="text" id="newUsername" name="newUsername" required id="">
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Senha</label>
+                <input type="password" id="newPassword" name="newPassword" required id="senha1">
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required id="senha2">
+            </div>
+            
+            <button type="submit">Criar Conta</button>
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+        <p class="login-link">
+            Já tem uma conta? <a href="login.html">Faça Login</a>
+        </p>
+    </div>
+
+    <script src="register.js"></script> </body>
             <h2>Login</h2>
             <form>
                 <div class="inputBox">
