@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Login Hacker</title>
     <link href="b.css" rel="stylesheet">
-    <script src="b.js"></script>
 </head>
 <body>
-    <div class="login-container"> <div class="logo-container">
+    <section>
+        <div class="signin">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" width="250px" height="250px">
             </div>
-        <h1 class="login-title">Cadastre-se</h1>
-
-        <form id="registerForm">
-            <div class="input-group">
-                <label for="newUsername">Usuário ou Email</label>
-                <input type="text" id="newUsername" name="newUsername" required>
-            </div>
-            <div class="input-group">
-                <label for="newPassword">Senha</label>
-                <input type="password" id="newPassword" name="newPassword" required>
-            </div>
-            <div class="input-group">
-                <label for="confirmPassword">Confirmar Senha</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-            
-            <button type="submit">Criar Conta</button>
-            <p class="error-message" id="errorMessage"></p>
-        </form>
-        <p class="login-link">
-            Já tem uma conta? <a href="login.html">Faça Login</a>
-        </p>
-    </div>
-
-    <script src="register.js"></script> </body>
+            <h2>Login</h2>
+            <form>
+                <div class="inputBox">
+                    <input type="text" required="required">
+                    <label>Usuario</label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <label>Senha</label>
+                </div>
+                <div class="links">
+                    <a href="#">esqueci minha senha</a>
+                    <a href="#">Inscrever-se</a>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
 </html>
