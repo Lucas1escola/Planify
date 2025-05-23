@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6a5acd; /* Cor de fundo roxa/azul clara similar à imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita scrollbars se houver algum overshoot */
+}
+
+.login-container { /* Esta classe é reutilizada para o cadastro */
+    background-color: #2c3e50; /* Um azul escuro para o card de login/cadastro */
+    padding: 40px;
+    border-radius: 15px; /* Cantos mais arredondados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: #ecf0f1; /* Cor de texto padrão para o card */
+    position: relative; /* Para posicionar o logo */
+    display: flex; /* Para centralizar os elementos dentro do container */
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container { /* Reutilizado */
+    width: 120px; /* Tamanho do círculo */
+    height: 120px;
+    background-color: #3498db; /* Azul do círculo */
+    border-radius: 50%; /* Faz um círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px; /* Espaço abaixo do círculo */
+    border: 3px solid #f1c40f; /* Borda amarela em volta do círculo */
+    overflow: hidden; /* Garante que a imagem não saia do círculo */
+}
+
+/* Estilo para a imagem dentro do logo-container */
+.logo-container img {
+    max-width: 80%; /* Ajusta o tamanho da imagem dentro do círculo */
+    max-height: 80%; /* Ajusta o tamanho da imagem dentro do círculo */
+    object-fit: contain; /* Garante que a imagem inteira seja visível, sem cortar */
+    /* Removido border-radius: 50% aqui, pois o container já faz o círculo */
+}
+
+
+.login-title { /* Reutilizado para "Cadastre-se" */
+    color: #ecf0f1; /* Cor do título "Login" ou "Cadastre-se" */
+    margin-bottom: 30px;
+    font-size: 2.2em; /* Tamanho da fonte maior */
+    font-weight: bold;
+}
+
+.input-group { /* Reutilizado */
+    margin-bottom: 25px; /* Mais espaço entre os campos */
+    text-align: left;
+    width: 100%; /* Ocupa a largura total do container */
+    position: relative; /* Para a linha inferior */
+}
+
+.input-group label { /* Reutilizado */
+    display: block;
+    margin-bottom: 5px;
+    color: #bdc3c7; /* Cor da label */
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] { /* Reutilizado */
+    width: 100%;
+    padding: 10px 0; /* Mais padding vertical, zero horizontal */
+    border: none; /* Remove a borda padrão */
+    background-color: transparent; /* Fundo transparente */
+    border-bottom: 1px solid #7f8c8d; /* Apenas uma linha na parte inferior */
+    color: #ecf0f1; /* Cor do texto digitado */
+    font-size: 1.1em;
+    outline: none; /* Remove o outline no foco */
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus { /* Reutilizado */
+    border-bottom-color: #3498db; /* Muda a cor da linha no foco */
+}
+
+/* Placeholder styling */
+.input-group input::placeholder {
+    color: #bdc3c7; /* Cor do placeholder */
+    opacity: 0.7;
+}
+
+/* Os links-container, forgot-password e signup-link-inline são específicos da página de login e não são necessários aqui */
+/* Mas mantenho-os no CSS caso você queira usá-los em outro lugar ou no futuro */
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.forgot-password, .signup-link-inline {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover, .signup-link-inline:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* NOVO ESTILO: Para o link "Já tem uma conta? Faça Login" na página de cadastro */
+.login-link {
+    margin-top: 25px;
+    color: #bdc3c7; /* Cor do texto base */
+    font-size: 0.9em;
+}
+
+.login-link a {
+    color: #3498db; /* Cor do link "Faça Login" */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #2980b9; /* Cor mais escura no hover */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+button[type="submit"] { /* Reutilizado */
+    background-color: #9b59b6; /* Cor do botão (roxo/rosa) */
+    color: white;
+    padding: 15px 30px; /* Mais padding para um botão maior */
+    border: none;
+    border-radius: 8px; /* Cantos arredondados no botão */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover { /* Reutilizado */
+    background-color: #8e44ad; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+.error-message { /* Reutilizado */
+    color: #e74c3c; /* Vermelho para mensagens de erro */
+    margin-top: 20px;
+    font-size: 0.9em;
+    height: 20px; /* Para manter o espaço mesmo sem erro */
+    display: block;
+}
+
+/* Responsividade básica (mantendo a mesma do exemplo anterior) */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px 20px; /* Ajuste no padding para telas menores */
+    }
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+    .login-title {
+        font-size: 1.8em;
+    }
+    button[type="submit"] {
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+}
