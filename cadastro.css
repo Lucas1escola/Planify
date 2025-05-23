@@ -24,17 +24,17 @@ body {
     align-items: center;
 }
 
-.logo-container { /* Reutilizado */
-    width: 120px; /* Tamanho do círculo */
+/*.logo-container { /* Reutilizado 
+    width: 120px; /* Tamanho do círculo 
     height: 120px;
-    background-color: #3498db; /* Azul do círculo */
-    border-radius: 50%; /* Faz um círculo */
+    background-color: #3498db; /* Azul do círculo 
+    border-radius: 50%; /* Faz um círculo 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px; /* Espaço abaixo do círculo */
-    border: 3px solid #f1c40f; /* Borda amarela em volta do círculo */
-    overflow: hidden; /* Garante que a imagem não saia do círculo */
+    margin-bottom: 25px; /* Espaço abaixo do círculo 
+    border: 3px solid #f1c40f; /* Borda amarela em volta do círculo 
+    overflow: hidden; /* Garante que a imagem não saia do círculo 
 }
 
 /* Estilo para a imagem dentro do logo-container */
